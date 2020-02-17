@@ -20,7 +20,43 @@ public abstract class Card
      * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
      */
     
-    @Override
-    public abstract String toString();
+    public enum Suit{HEARTS, DIAMONDS, SPADES, CLUBS};
+    public enum Value{ACE, TWO,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT,NINE,TEN,JACK,QUEEN,KING};
+    
+    private Suit suit;
+    private Value value;
+    
+    public Card(Suit s, Value v){
+        suit = s;
+        value = v;
+    }
+
+    /**
+     * @return the suit
+     */
+    public Suit getSuit() {
+        return suit;
+    }
+
+    /**
+     * @param suit the suit to set
+     */
+    public void setSuit(Suit suit) {
+        this.suit = suit;
+    }
+
+    /**
+     * @return the value
+     */
+    public Value getValue() {
+        return value;
+    }
+
+    /**
+     * @param value the value to set
+     */
+    public void setValue(Value value) {
+        this.value = value;
+    }
     
 }
